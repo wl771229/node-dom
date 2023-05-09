@@ -9,7 +9,7 @@ const router = new Router({prefix:'/users'})
 router.post('/register',userValidator,verifyUser,register)
 
 // 登录接口
-router.post('/login',login)
+router.post('/login',userValidator,login)
 
 
  
@@ -17,5 +17,6 @@ router.post('/login',login)
 // router.get('/',(ctx,next)=>{
 //     ctx.body = 'hellow users'
 // })
+
 
 module.exports = router
